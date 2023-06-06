@@ -26,11 +26,11 @@ export class ContactForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <form className={c.form} onSubmit={this.handleOnSubmit}>
-        <label className={c.label}>
+      <form className={c.contactAddForm} onSubmit={this.handleOnSubmit}>
+        <label className={c.contactAddLabel}>
           Name
           <input
-            className={c.input}
+            className={c.contactAddInput}
             type="text"
             name="name"
             value={name}
@@ -40,10 +40,10 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <label className={c.label}>
+        <label className={c.contactAddLabel}>
           Number
           <input
-            className={c.input}
+            className={c.contactAddInput}
             type="tel"
             name="number"
             value={number}
@@ -53,7 +53,7 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <button className={c.button} type="submit">
+        <button className={c.contactAddBtn} type="submit">
           Add contact
         </button>
       </form>
